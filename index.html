@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Projeto Convert-money Two</title>
+</head>
+
+<body>
+    <img class="icone-animado" src="./assets/cifrão dolar.jpeg" alt="logo-image" width="250px">
+    <main>
+        <label>
+            Converter <b>de</b>
+            <select>
+                <option>USD dólar Americano</option>
+            </select>
+        </label>
+
+        <label>
+            Converter <b>para</b>
+            <select class="currency-select">
+                <option value="Euro">€ Euro</option> <!--O value é para que quando selecionar o valor apareça somente o nome sem Cifrão-->
+                <option value="Real">R$ Real Brasileiro</option> <!--O value é para que quando selecionar o valor apareça somente o nome sem Cifrão-->
+            </select>
+        </label>
+
+        <label>
+            <b>Valor</b>
+            <input placeholder="USD 10.000" class="input-currency">
+        </label>
+
+        <button class="convert-button">Convert</button>
+
+        <section>
+            <div class="currency-box"><!--Classe criada para formatação no Css-->
+                <img src="./assets/estados-unidos.png" alt="dolar-image" />
+                <p class="currency">Dólar</p> <!--Classe criada para formatação no Css-->
+                <p class="currency-value-to-convert">USD 0,00</p><!--Classe criada para formatação no Css-->
+            </div>
+
+            <img class="arrow-png" src="./assets/seta dourado2.jpeg" alt="arrow" width="50px" height="50px" />
+            
+            <div class="currency-box"><!--Classe criada para formatação no Css-->
+                <img class="currency-img" src="./assets/euro.png" alt="euro-image" /><!--Classe criada para que no Js quando clicar no select mude a imagem da moeda condizente-->
+                <p class="currency" id="currency-name">Euro</p><!--Classe criada para formatação no Css, e também para que no Js quando mudar o select mude o nome-->
+                <p class="currency-value">€ 0,00</p><!--Classe criada para formatação no Css-->
+            </div>
+        </section>
+    </main>
+</body>
+
+<script src="./script.js">
+
+</script>
+
+</html>

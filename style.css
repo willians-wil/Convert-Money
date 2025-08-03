@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+body {
+    background-image: url(https://economicnewsbrasil.com.br/wp-content/uploads/2024/02/Cotacao-do-Dolar-1.webp);
+
+}
+input{
+    display: flex;
+    flex-direction: column;
+}
+main{
+    display: block;
+    margin: 15px auto;
+    width: 375px;
+    height: 742px;
+    background: #F4F4F4;
+    padding: 44px 24px 23px;
+    border-radius: 20px;
+}
+img{
+    display: block;
+    margin: 0 auto;
+}
+label{
+    font-size: 16px;
+    font-weight: 400;
+    color: #777;
+}
+select, input{
+    height: 48px;
+    width: 100%;
+    padding: 15px 18px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #555555;
+    margin: 7px 0 24px;
+    outline: none;
+    text-transform: capitalize;
+}
+button{
+    font-size: 18px;
+    font-weight: 700px;
+    color: #fff;
+    background: #d4aa46;
+    height: 48px;
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 35px;
+    border: none;
+    box-shadow: 3px 3px 4px #c3c3c3;
+    cursor: pointer;
+    transition: 0.5s;
+}
+button:hover{
+    background: #9c6416;
+}
+section{  /* 1° display Flex na section*/
+    display: flex; 
+    flex-direction: column;
+    align-items: center; /*Para que centralize após o display flex e o flex-direction: column*/
+    border: 1px solid #772FD3;
+    border-radius: 20px;
+}
+.arrow-png{ /* 2° margin: 15px*/
+    margin: 7px;
+}
+.currency-box{ /*3°*/
+    display: flex;
+    flex-direction: column; /*Alinhamento em coluna*/
+    align-items: center; /*Para que o parágrafo Texto, centralize*/
+    gap:2px; /*Espaçamento entre as letras e números*/
+    margin: 12px 0;
+}
+.currency{
+    font-size: 14px;
+    color: #777777;
+    font-weight: 400;
+}
+.currency-value{
+    font-size: 20px;
+    font-weight: 700;
+    color: #555;
+}
+
+                /*Efeito de animação imagem no Eixo X como um flap*/
+
+.icone-animado {
+    width: 300px;
+    height: auto;
+    animation: flipHorizontal 4s linear infinite; /*Animação no eixo X como um flap*/
+    transform-style: preserve-3d;
+}
+
+@keyframes flipHorizontal {
+    from { /*De*/
+        transform: rotateX(0deg);
+    }
+    to { /*Para*/
+        transform: rotateX(360deg);
+    }
+}
+

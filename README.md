@@ -1,4 +1,4 @@
-# 💱 Convert Money Two
+# 💱 Convert Money 
 
 Projeto simples de um **Conversor de Moeda** desenvolvido com **HTML, CSS e JavaScript**, no qual o usuário pode converter valores de **Dólar (USD)** para **Euro (EUR)** ou **Real Brasileiro (BRL)**, com uma interface visual e interativa.
 

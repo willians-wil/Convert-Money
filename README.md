@@ -15,7 +15,7 @@ Projeto simples de um **Conversor de Moeda** desenvolvido com **HTML, CSS e Java
 - JavaScript (Vanilla JS - DOM Manipulation)
 
 ## 🖥️ Demonstração Visual
-📸 *Adicione um GIF ou Screenshot aqui*
+📸 <img src="https://github.com/willians-wil/Convert-Money/blob/main/assets/convert%20money.png?raw=true" />
 
 ## 📝 Como Utilizar Localmente
 1. Clone este repositório:

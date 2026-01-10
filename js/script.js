@@ -1,73 +1,92 @@
+// Botão de converter
 const convertButton = document.querySelector(".convert-button")
+
+// Select de moedas
 const currencySelect = document.querySelector(".currency-select")
+
+// Input do valor em dólar
 const inputCurrency = document.querySelector(".input-currency")
-const currencyValueToConvert = document.querySelector(".currency-value")
+
+// Valor em dólar (origem)
+const currencyValueToConvert = document.querySelector(".currency-value-to-convert")
+
+// Valor convertido (destino)
 const currencyValueConverted = document.querySelector(".currency-value")
-const currencyName = document.querySelector(".currency-name")
+
+// Nome da moeda
+const currencyName = document.querySelector("#currency-name")
+
+// Imagem da moeda
 const currencyImage = document.querySelector(".currency-img")
 
-//console.log (currencySelect.value)
-
+// Taxas de conversão (base: dólar)
 const rates = {
-  euro: 6.2,
-  real: 0.19
+  euro: 0.92,
+  real: 5.10
 }
 
+// Função para formatar valores em moeda
 function formatCurrency(value, locale, currency) {
-  return new Intl.NumberFormat(locale, {
+  return new Intl.NumberFormat(locale, { //É uma ferramenta nativa do JavaScript, serve para formatar números de acordo com regras de um país
     style: "currency",
     currency
   }).format(value)
 }
 
+// Função principal de conversão
 function convertValues() {
   const inputValue = Number(inputCurrency.value)
 
+  // Validação
   if (!inputValue || inputValue <= 0) {
     alert("Digite um valor válido")
     return
   }
-  let convertedValue
-  if (currencySelect.value === "Euro") {
-    convertedValue = inputValue / rates.euro
 
-    currencyValueConverted.innerHTML = formatCurrency(
-      convertedValue,
-      "de-DE",
-      'EUR'
-    )
-  }
-  else if (currencySelect.value === "Real") {
-    convertedValue = inputValue / rates.real
-
-    currencyValueToconvert.innerHTML = formatCurrency(
-      inputValue,
-      "pt-br",
-      "BRL"
-    )
-  }
-
-  currencyValueToconvert.innerHTML = formatCurrency(
+  // Sempre mostrar o valor original em dólar
+  currencyValueToConvert.innerHTML = formatCurrency(
     inputValue,
     "en-US",
     "USD"
   )
+
+  // Conversões
+  if (currencySelect.value === "Euro") {//Se o valor selecionado no select for exatamente igual a ‘Euro’, execute o código dentro do bloco
+    const convertedValue = inputValue * rates.euro
+
+    currencyValueConverted.innerHTML = formatCurrency(
+      convertedValue,
+      "de-DE",
+      "EUR"
+    )
+  }
+
+  else if (currencySelect.value === "Real") {
+    const convertedValue = inputValue * rates.real
+
+    currencyValueConverted.innerHTML = formatCurrency(
+      convertedValue,
+      "pt-BR",
+      "BRL"
+    )
+  }
 }
 
+// Atualiza nome e imagem da moeda
 function changeCurrency() {
   if (currencySelect.value === "Euro") {
     currencyName.innerHTML = "Euro"
-    currencyImage.src = "assets/euro.png"
+    currencyImage.src = "./assets/euro.png"
   }
-  else if (currencySelect.value === "Real") {
+
+  if (currencySelect.value === "Real") {
     currencyName.innerHTML = "Real Brasileiro"
     currencyImage.src = "./assets/brasil.png"
   }
+
   convertValues()
 }
 
-//IF (Se tal coisa for igual, faça isso, se não faça aquilo)
-
-
-currencySelect.addEventListener("change", changeCurrency) //Vai ficar de olho, toda vez que o SELECT mudar ...Na troca de imagem das bandeiras e o nome ao adicionar o evento de mudança criar uma função
-convertButton.addEventListener("click", convertValues) //Fica de olho, ouvindo toda vez que o botão é clicado
+// Eventos
+currencySelect.addEventListener("change", changeCurrency)
+convertButton.addEventListener("click", convertValues)

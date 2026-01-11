@@ -19,6 +19,9 @@ const currencyName = document.querySelector("#currency-name")
 // Imagem da moeda
 const currencyImage = document.querySelector(".currency-img")
 
+//Mensagem de erro
+const errorMessage = document.querySelector (".error-message")
+
 // Taxas de conversão (base: dólar)
 const rates = {
   euro: 0.92,
@@ -32,16 +35,26 @@ function formatCurrency(value, locale, currency) {
     currency
   }).format(value)
 }
-
+function showError(message){
+  errorMessage.innerText =  message
+  errorMessage.classList.add("active")
+}
 // Função principal de conversão
 function convertValues() {
   const inputValue = Number(inputCurrency.value)
 
+  //Limpa erro
+  function clearError(){
+    errorMessage.classList.remove("active")
+  }
+
   // Validação
-  if (!inputValue || inputValue <= 0) {
-    alert("Digite um valor válido")
+  if (isNaN (inputValue)|| inputValue <=0){
+    showError ("Digite um valor maior que zero.")
     return
   }
+
+  clearError()
 
   // Sempre mostrar o valor original em dólar
   currencyValueToConvert.innerHTML = formatCurrency(

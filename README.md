@@ -1,58 +1,99 @@
-# 💱 Convert Money 
+# 💱 Convert Money
 
-Projeto simples de um **Conversor de Moeda** desenvolvido com **HTML, CSS e JavaScript**, no qual o usuário pode converter valores de **Dólar (USD)** para **Euro (EUR)** ou **Real Brasileiro (BRL)**, com uma interface visual e interativa.
+Aplicação frontend de **Conversão de Moedas** desenvolvida com **HTML, CSS e JavaScript puro**, com foco em **boas práticas de código, organização, acessibilidade e manipulação do DOM**.
+
+O projeto permite converter valores de **Dólar (USD)** para **Euro (EUR)** ou **Real Brasileiro (BRL)**, utilizando taxas fixas simuladas.
+
+---
 
 ## ✨ Funcionalidades
-- Conversão de valores entre Dólar → Euro ou Real (valores fixos simulados).
+
+- Conversão de valores de Dólar para Euro ou Real Brasileiro.
 - Seleção dinâmica da moeda de destino.
-- Atualização automática do nome e bandeira da moeda selecionada.
-- Formatação dos valores em tempo real (padrões monetários USD, EUR, BRL).
-- Interface limpa e intuitiva, ideal para estudos.
+- Atualização automática do nome, símbolo e bandeira da moeda selecionada.
+- Validação de entrada com feedback visual e acessível.
+- Formatação monetária utilizando `Intl.NumberFormat`.
+- Interface simples, clara e intuitiva.
+
+---
+
+## ♿ Acessibilidade
+
+O projeto aplica boas práticas básicas de acessibilidade:
+
+- Uso de `<label>` associado aos inputs.
+- Uso de `aria-label` para descrição clara dos campos.
+- Uso de `aria-live="assertive"` para anunciar mensagens de erro dinâmicas.
+- Estrutura semântica com HTML5 (`main`, `section`, `label`).
+
+Essas práticas garantem melhor experiência para usuários de tecnologias assistivas.
+
+---
 
 ## 🚀 Tecnologias Utilizadas
-- HTML5
-- CSS3
-- JavaScript (Vanilla JS - DOM Manipulation)
+
+- **HTML5** — Estrutura semântica da aplicação  
+- **CSS3** — Estilização e layout responsivo  
+- **JavaScript (Vanilla JS)** — Manipulação do DOM, validações e lógica de conversão  
+
+---
 
 ## 🖥️ Demonstração Visual
-📸 <img src="https://github.com/willians-wil/Convert-Money/blob/main/assets/desktop%20readme.png?raw=true" >
+
+📸  
+<img src="https://github.com/willians-wil/Convert-Money/blob/main/assets/desktop%20readme.png?raw=true" alt="Demonstração do projeto Convert Money">
+
+---
 
 ## 📝 Como Utilizar Localmente
-1. Clone este repositório:
+
+1. Clone o repositório:
    ```bash
    git clone https://github.com/willians-wil/convert-money-two.git
-   ```
-2. Navegue até a pasta do projeto:
-   ```bash
-   cd convert-money-two
-   ```
-3. Abra o arquivo `index.html` no seu navegador.
-4. Insira o valor em Dólar (USD).
-5. Selecione a moeda de destino (Euro ou Real).
-6. Clique em **Convert** e veja o resultado da conversão.
 
-## 📂 Estrutura do Projeto
-```
+    Acesse a pasta do projeto:
+
+    cd convert-money-two
+
+    Abra o arquivo index.html no navegador.
+
+    Insira um valor em Dólar (USD), selecione a moeda de destino e clique em Convert.
+
+📂 Estrutura do Projeto
+
 /
 ├── assets/
 │   ├── cifrão dolar.jpeg
 │   ├── estados-unidos.png
 │   ├── euro.png
+│   ├── brasil.png
 │   └── seta dourado2.jpeg
+├── css/
+│   └── style.css
+├── js/
+│   └── script.js
 ├── index.html
-├── style.css
-└── script.js
-```
+└── README.md
 
-## 🔮 Possíveis Melhorias Futuras
-- Integração com uma API de câmbio em tempo real.
-- Adicionar mais moedas para conversão (GBP, JPY, etc.).
-- Melhorias na responsividade mobile.
-- Animações suaves nas mudanças de valores e bandeiras.
+🔮 Possíveis Melhorias Futuras
 
-## 🌐 Visualização Online
-link: https://willians-wil.github.io/Convert-Money/
+    Integração com API de câmbio em tempo real.
 
-## ✍️ Autor
-**Willians Batista Narciso**  
-[LinkedIn](https://www.linkedin.com/feed/) | [GitHub](https://github.com/willians-wil)
+    Inclusão de novas moedas (GBP, JPY, CAD, etc.).
+
+    Melhorias de responsividade para dispositivos móveis.
+
+    Animações suaves nas transições de valores.
+
+🌐 Visualização Online
+
+🔗 https://willians-wil.github.io/Convert-Money/
+✍️ Autor
+
+Willians Batista Narciso
+Desenvolvedor Frontend / Fullstack Júnior
+
+    🔗 LinkedIn:https://www.linkedin.com/in/williansnarciso/
+
+    💻 GitHub:https://github.com/willians-wil
+

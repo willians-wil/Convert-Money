@@ -1,8 +1,6 @@
 # 💱 Convert Money
 
-Aplicação frontend de **Conversão de Moedas** desenvolvida com **HTML, CSS e JavaScript puro**, com foco em **boas práticas de código, organização, acessibilidade e manipulação do DOM**.
-
-O projeto permite converter valores de **Dólar (USD)** para **Euro (EUR)** ou **Real Brasileiro (BRL)**, utilizando taxas fixas simuladas.
+Aplicação frontend de Conversão de Moedas, desenvolvida com HTML, CSS e JavaScript puro, focada em boas práticas, acessibilidade e manipulação do DOM.
 
 ---
 
@@ -49,7 +47,8 @@ Essas práticas garantem melhor experiência para usuários de tecnologias assis
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/willians-wil/convert-money-two.git
+   git clone https://github.com/willians-wil/Convert-Money.git
+
 
     Acesse a pasta do projeto:
 

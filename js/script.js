@@ -1,4 +1,4 @@
-const elements = {
+
 // Botão de converter
 const convertButton = document.querySelector(".convert-button")
 
@@ -22,7 +22,7 @@ const currencyImage = document.querySelector(".currency-img")
 
 // Mensagem de erro
 const errorMessage = document.querySelector(".error-message")
-}
+
 // Taxas de conversão (base: dólar)
 const currencies = {
   EUR: {

@@ -52,7 +52,7 @@ Essas práticas garantem melhor experiência para usuários de tecnologias assis
 
     Acesse a pasta do projeto:
 
-    cd convert-money-two
+    cd convert-money
 
     Abra o arquivo index.html no navegador.
 

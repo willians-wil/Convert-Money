@@ -1,38 +1,42 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Roboto", sans-serif;
 }
+
 body {
     background-image: url(https://economicnewsbrasil.com.br/wp-content/uploads/2024/02/Cotacao-do-Dolar-1.webp);
-
-}
-input{
+    background-size: cover;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
 }
-main{
+
+main {
     display: block;
     margin: 15px auto;
     width: 375px;
-    height: 742px;
+    height: auto;
     background: #F4F4F4;
     padding: 44px 24px 23px;
     border-radius: 20px;
 }
-img{
+
+img {
     display: block;
     margin: 0 auto;
 }
-label{
+
+label {
     font-size: 16px;
     font-weight: 400;
     color: #777;
 }
-select, input{
+
+select, input {
     height: 48px;
     width: 100%;
     padding: 15px 18px;
@@ -43,9 +47,10 @@ select, input{
     outline: none;
     text-transform: capitalize;
 }
-button{
+
+button {
     font-size: 18px;
-    font-weight: 700px;
+    font-weight: 700;
     color: #fff;
     background: #d4aa46;
     height: 48px;
@@ -57,50 +62,53 @@ button{
     cursor: pointer;
     transition: 0.5s;
 }
-button:hover{
+
+button:hover {
     background: #9c6416;
 }
-section{  
-    display: flex; 
-    flex-direction: column;
-    align-items: center; 
-    border: 1px solid #772FD3;
-    border-radius: 20px;
-}
-.arrow-png{ 
-    margin: 7px;
-}
-.currency-box{ /*3°*/
+
+.currency-box {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     align-items: center;
-    gap:2px; 
-    margin: 12px 0;
+    margin-top: 20px;
 }
-.currency{
-    font-size: 14px;
-    color: #777777;
-    font-weight: 400;
+
+.currency-img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 5px;
 }
-.currency-value{
+
+#currency-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: #555;
+}
+
+.currency-value, .currency-value-to-convert {
     font-size: 20px;
     font-weight: 700;
     color: #555;
+    text-align: center;
+    margin: 5px 0;
+}
+
+.error-message {
+    color: red;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 10px;
 }
 
 .icone-animado {
     width: 300px;
     height: auto;
-    animation: flipHorizontal 4s linear infinite; /*Animação no eixo X como um flap*/
+    animation: flipHorizontal 4s linear infinite;
     transform-style: preserve-3d;
 }
 
 @keyframes flipHorizontal {
-    from { /*De*/
-        transform: rotateX(0deg);
-    }
-    to { /*Para*/
-        transform: rotateX(360deg);
-    }
+    from { transform: rotateX(0deg); }
+    to { transform: rotateX(360deg); }
 }
-
